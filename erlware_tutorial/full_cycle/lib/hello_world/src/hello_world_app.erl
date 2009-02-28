@@ -33,7 +33,7 @@
 %% @end
 %%--------------------------------------------------------------------
 start(_StartType, _StartArgs) ->
-    case hello_world_sup:start_link() of
+    case 'TopSupervisor':start_link() of
         {ok, Pid} ->
             {ok, Pid};
         Error ->

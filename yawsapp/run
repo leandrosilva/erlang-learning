@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd ebin
+erl +A 1 +Ktrue -boot start_sasl +W w -sname yawsappnode -pa /opt/local/lib/yaws/ebin -yaws embedded true

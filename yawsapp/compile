@@ -1,0 +1,3 @@
+#!/bin/sh
+
+erlc -o ebin/ src/yawsapp.erl src/yawsapp_server.erl src/yawsapp_sup.erl src/yawsapp_handler.erl

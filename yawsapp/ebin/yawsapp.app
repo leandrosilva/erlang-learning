@@ -12,7 +12,7 @@
   {registered, [yawsapp]},
   {env, [
     {port, 8006},
-    {working_dir, "/Users/leandro/Projects/erlang/yaws_app/"}
+    {working_dir, "/Users/leandro/Projects/erlang/erlang-learning/yawsapp/"}
   ]},
   {applications, [kernel, stdlib, sasl]},
   {mod, {yawsapp, []}}

@@ -42,7 +42,7 @@ set_conf([Port, WorkingDir]) ->
         port = Port,
         servername = "localhost",
         listen = {0, 0, 0, 0},
-        docroot = "www",
+        docroot = "../www",
         appmods = [{"/", yawsapp_handler}]
     },
     case catch yaws_api:setconf(GC, [[SC]]) of

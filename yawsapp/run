@@ -2,3 +2,9 @@
 
 cd ebin
 erl +A 1 +Ktrue -boot start_sasl +W w -sname yawsappnode -pa /opt/local/lib/yaws/ebin -yaws embedded true
+
+# next, type in Erlang shell:
+#
+# > application:start(yawsapp).
+#
+# ok, you can open http://localhost:8006 in your browser and seed the magic.

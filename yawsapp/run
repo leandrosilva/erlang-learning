@@ -7,4 +7,4 @@ erl +A 1 +Ktrue -boot start_sasl +W w -sname yawsappnode -pa /opt/local/lib/yaws
 #
 # > application:start(yawsapp).
 #
-# ok, you can open http://localhost:8006 in your browser and seed the magic.
+# ok, you can open http://localhost:8006 in your browser and see the magic.

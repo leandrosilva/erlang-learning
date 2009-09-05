@@ -29,7 +29,7 @@ get_path(Arg) ->
     {abs_path, Path} = Req#http_request.path,
     Path.
 
-handle_request('GET', [47,97,99,99,111,117,110,116 | _], _Arg) -> % "/account" ...
+handle_request('GET', "/account", _Arg) -> % "/account" only
     make_response(200, "<p>Please login or logout.</p>");
 
 handle_request('GET', [47,112,114,111,102,105,108,101 | _], _Arg) -> % "/profile" ...

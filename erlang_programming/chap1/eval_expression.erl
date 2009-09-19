@@ -1,3 +1,7 @@
+%%
+%% Exercise 3-1: Evaluating Expressions
+%%
+
 -module(eval_expression).
 -export([sum/1]).
 

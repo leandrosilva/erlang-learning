@@ -1,3 +1,7 @@
+%%
+%% Exercise 2-3: Simple Pattern Matching
+%%
+
 -module(bool).
 -export([b_not/1, b_and/2, b_or/2, b_nand/2]).
 

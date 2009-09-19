@@ -1,3 +1,7 @@
+%%
+%% Exercise 2-2: Modules and Functions
+%%
+
 -module(area_calc).
 -export([area/1]).
 

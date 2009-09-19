@@ -1,4 +1,8 @@
 %%
+%% Exercise 2-2: Modules and Functions
+%%
+%% ---
+%%
 %% To see informations about this module in Erlang shell do it:
 %%
 %% 1> demo:module_info().

@@ -20,9 +20,9 @@
 -export([out/1, handle_request/3]).
 
 out(Arg) ->
-  Req = Arg#arg.req,
-  ReqPath = get_path(Arg),
-  handle_request(Req#http_request.method, ReqPath, Arg).
+  	Req = Arg#arg.req,
+  	ReqPath = get_path(Arg),
+  	handle_request(Req#http_request.method, ReqPath, Arg).
 
 get_path(Arg) ->
     Req = Arg#arg.req,
@@ -34,6 +34,17 @@ handle_request('GET', "/account", _Arg) -> % "/account" only
 
 handle_request('GET', [47,112,114,111,102,105,108,101 | _], _Arg) -> % "/profile" ...
     make_response(200, "<p>This is a slick profile.</p>");
+
+%%
+%% My custom function to test delegation.
+%%
+%% The yawsapp_handler_custom module is a process started at yawsapp_server:init/1 function.
+%%
+handle_request('GET', "/custom", _Arg) -> % "/custom" only
+		yawsapp_handler_custom ! {request, self(), 'GET', "/custom", _Arg},
+		receive
+			{response, Status, Message} -> make_response(Status, Message)
+		end;
 
 handle_request(_, _, _Arg) -> % catchall
     make_response(200, "<p>What exactly are you looking for?</p>").

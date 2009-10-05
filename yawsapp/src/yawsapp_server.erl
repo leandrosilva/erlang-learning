@@ -27,8 +27,8 @@ start_link(Args) ->
 init(Args) ->
     process_flag(trap_exit, true),
 
-		%% here we might spawn a lot of custom handlers to deal with our http requests
-		register(yawsapp_handler_custom, spawn_link(yawsapp_handler_custom, loop, [null])),
+    %% here we might spawn a lot of custom handlers to deal with our http requests
+    register(yawsapp_handler_custom, spawn_link(yawsapp_handler_custom, loop, [null])),
 
     case application:start(yaws) of
         ok -> set_conf(Args);
